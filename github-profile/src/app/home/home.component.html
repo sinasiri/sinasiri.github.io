@@ -1,0 +1,76 @@
+<div class="home-container">
+  <div class="bio">
+    <p class="me">✌🏻 Hi There! I'm Sina Nasiri</p>
+    <p class="bio-explain">
+      I am <span>Software Developer</span>. I craft Digital Solutions as a <span>Software Engineer</span>.
+    </p>
+    <div class="social-media">
+      <ng-container *ngFor="let social of socials">
+        <a target="_blank" [href]="social.link"><img [src]="social.imageUrl"></a>
+      </ng-container>
+    </div>
+    <div class="btn-container">
+      <a href="./assets/static/Sina-Nasiri-CV.pdf" download="sina-nasiri-cv">Get a copy of my CV</a>
+    </div>
+  </div>
+  <div class="image">
+    <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+</div>
+<div class="can-i-do">
+  <p>What Can I Do For You?</p>
+</div>
+
+<div class="full-stack-development">
+  <div class="img">
+    <ng-lottie [options]="backEndOptions" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+  <div class="description">
+    <div class="title">
+      Full-Stack Development
+    </div>
+    <div class="item-container">
+      <div class="item">⚡ Proficient in Backend Develpment using Spring Boot</div>
+      <div class="item">⚡ Building responsive website front end using Angular</div>
+      <div class="item">⚡ Hands-on experience with various front-end libraries, including D3.js</div>
+      <div class="item"> ⚡ Advanced Understanding of OOP Concepts</div>
+
+      <div class="item"> ⚡ Well-Versed in Testing and Debugging Methods</div>
+
+      <div class="item"> ⚡ Capable Problem Solver with Strong Logical Aptitude</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 100px" class="full-stack-development">
+  <div class="description">
+    <div class="title">
+      Cloud Infra-Architecture
+    </div>
+    <div class="item-container">
+      <div class="item">⚡ Limited Hands-on Experience with Cloud Services from Different Providers</div>
+      <div class="item">⚡ Experience in hosting and managing websites</div>
+      <div class="item">⚡ Experience with Continuous Integration and DevOps</div>
+      <div class="item">⚡ Understanding the Linux OS</div>
+      <div class="item">⚡ Divine Knowledge in Web Services and APIs</div>
+    </div>
+  </div>
+  <div class="img">
+    <ng-lottie [options]="cloudOptions" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+</div>
+<div style="margin-top: 100px;margin-bottom: 50px" class="full-stack-development">
+  <div class="img">
+    <ng-lottie [options]="cryptoOptions" (animationCreated)="animationCreated($event)"></ng-lottie>
+  </div>
+  <div class="description">
+    <div class="title">
+      BlockChain and Web 3.0
+    </div>
+    <div class="item-container">
+      <div class="item">⚡ Enthusiastic about exploring and collaborating with Web3.0 and blockchain technologies</div>
+      <div class="item">⚡ Limited Hands-on Experience with Web3.0 and BlockChain Development</div>
+      <div class="item">⚡ Basic familiarity with Smart Contracts</div>
+    </div>
+  </div>
+</div>
