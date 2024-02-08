@@ -1,0 +1,25 @@
+.full-stack-development {
+  gap: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .description {
+    .title {
+      font-size: 56px;
+      font-weight: 400;
+      line-height: normal;
+      color: orange;
+    }
+
+    .item-container {
+      margin-top: 50px;
+
+      .item {
+        margin-top: 10px;
+        font-size: 20px;
+        color: rgb(141, 141, 141);
+      }
+    }
+  }
+}
