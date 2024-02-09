@@ -47,6 +47,7 @@
 }
 
 .card {
+  margin-bottom: 50px;
   width: 80%;
   display: flex;
   align-items: center;
@@ -60,6 +61,12 @@
     padding: 10px;
     border: 1px solid #d9dbdf;
     box-shadow: 5px 5px 5px #d9dbdf;
+
+    img {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+    }
   }
 
 
@@ -91,6 +98,17 @@
       margin-top: 7px;
       margin-bottom: 5px;
       font-weight: bold;
+
+      .year {
+        color: white;
+        font-weight: normal;
+        margin-top: 15px;
+      }
+    }
+
+    .card-main-description {
+      padding: 10px;
+      color: white;
     }
 
   }
