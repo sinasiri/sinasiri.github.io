@@ -1,0 +1,44 @@
+<div class="full-stack-development">
+  <div class="img">
+    <ng-lottie [options]="options"></ng-lottie>
+  </div>
+  <div class="description">
+    <div class="title">
+      Contact me
+    </div>
+    <div class="item-container">
+      <div class="item">"If people like you they will listen to you, but if they trust you they'll do business with
+        you."
+      </div>
+      <app-social-media></app-social-media>
+      <app-cv [buyMeACoffee]="false"></app-cv>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-top: 150px;margin-bottom: 100px" class="full-stack-development">
+
+  <div class="description">
+    <div>
+      <h1 class="title-colorless">I'd love to hear from you</h1>
+    </div>
+    <div class="item-container">
+      <form (submit)="sendEmail($event)" class="contact-form">
+        <input class="contact-form-text" type="text" name="name" placeholder="Name" required>
+        <input class="contact-form-text" type="email" name="email" placeholder="Email" required>
+        <input class="contact-form-text" type="text" name="subject" placeholder="Subject"
+               required>
+        <textarea class="contact-form-text text-area" name="message" placeholder="Message"
+                  spellcheck="false"
+                  required></textarea>
+
+        <input type="submit" value="Send" class="contact-form-btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="img">
+    <ng-lottie [options]="emailOptions"></ng-lottie>
+  </div>
+</div>

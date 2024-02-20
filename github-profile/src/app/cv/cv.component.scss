@@ -1,0 +1,31 @@
+.btn-container {
+  transition: all .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+
+  .buy {
+    margin-left: 30px;
+    background-color: yellow;
+  }
+
+  a {
+    text-align: center;
+    background-color: #faa700;
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 4px;
+    border-width: 0;
+    margin-bottom: 20px;
+    width: 230px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+  }
+;
+}

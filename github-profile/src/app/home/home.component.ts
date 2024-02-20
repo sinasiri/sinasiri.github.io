@@ -2,11 +2,13 @@ import {Component} from '@angular/core';
 import {CommonModule, NgFor} from "@angular/common";
 import {AnimationItem} from 'lottie-web';
 import {LottieComponent, AnimationOptions} from 'ngx-lottie';
+import {SocialMediaComponent} from "../social-media/social-media.component";
+import {CvComponent} from "../cv/cv.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NgFor, LottieComponent],
+  imports: [CommonModule, NgFor, LottieComponent, SocialMediaComponent, CvComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

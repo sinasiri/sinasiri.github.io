@@ -4,15 +4,8 @@
     <p class="bio-explain">
       I am <span>Software Developer</span>. I craft Digital Solutions as a <span>Software Engineer</span>.
     </p>
-    <div class="social-media">
-      <ng-container *ngFor="let social of socials">
-        <a target="_blank" [href]="social.link"><img [src]="social.imageUrl"></a>
-      </ng-container>
-    </div>
-    <div class="btn-container">
-      <a  href="./assets/static/Sina-Nasiri-CV.pdf" download="sina-nasiri-cv">Get a copy of my CV</a>
-      <a class="buy" target="_blank" href="https://www.buymeacoffee.com/sinasiri">&#9749; Buy me a coffee</a>
-    </div>
+    <app-social-media></app-social-media>
+    <app-cv></app-cv>
   </div>
   <div class="image">
     <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
