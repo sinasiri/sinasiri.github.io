@@ -1,1 +1,31 @@
-<p>blog works!</p>
+<div class="full-stack-development">
+  <div class="img">
+    <ng-lottie [options]="options"></ng-lottie>
+  </div>
+  <div class="description">
+    <div class="title">
+      My Blogs
+    </div>
+    <div class="item-container">
+      <div class="item">"A person who never made a mistake never tried anything new"</div>
+      <div class="item">"I’m a big believer in sharing my failures as well as my successes, so (readers) know what works
+        and what doesn’t"
+      </div>
+      <div class="item">"Tell a story. Make it true. Make it compelling. And make it relevant"</div>
+    </div>
+  </div>
+</div>
+
+<h1 class="blogs-title">My Latest Blogs</h1>
+
+
+<div class="blog-container">
+  <a target="_blank" [href]="blog.href" *ngFor="let blog of blogs" class="blog">
+    <img [src]="blog.imageUrl">
+    <div class="date">{{blog.date}}</div>
+    <div class="title">{{blog.title}}</div>
+  </a>
+</div>
+<div class="more-blogs">
+  <a target="_blank" href="https://sinasiri.hashnode.dev/" class="btn"> View More Blogs</a>
+</div>
