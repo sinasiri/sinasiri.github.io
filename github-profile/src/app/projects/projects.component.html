@@ -1,0 +1,37 @@
+<div class="full-stack-development">
+  <div class="img">
+    <ng-lottie [options]="options"></ng-lottie>
+  </div>
+  <div class="description">
+    <div class="title">
+      Projects
+    </div>
+    <div class="item-container">
+      <div class="item"> “Success is the delivery of a product that meets expectation”
+      </div>
+      <div class="item"> Every project is an opportunity to learn, to figure out problems and challenges, to invent and
+        reinvent.
+      </div>
+      <div class="item"> Every project has challenges, and every project has its rewards.The bad experiences make you
+        stronger and makes you focus on the next projec
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="title-middle">My Open Source Commitments
+</p>
+
+
+<div class="project-container">
+  <div *ngFor="let p of projects" class="project">
+    <div class="title">{{p?.title}}</div>
+    <p class="description">{{p?.description}}</p>
+    <div class="image-container">
+      <img *ngFor="let img of p?.techIcons" [src]="'./assets/images/tech/' + img + '.png'">
+    </div>
+    <p class="description">Technologies Used: {{p?.technologies}}</p>
+    <a target="_blank" [href]="p?.link">Code</a>
+  </div>
+</div>
+
