@@ -16,6 +16,43 @@ export class ExperienceComponent implements OnInit {
     path: './assets/animations/experience.json',
   };
 
+  experiences = [
+    {
+      left: {
+        company: 'Data Virtuality GMBH',
+        date: 'September 2020 - till now',
+        location: 'Germany (Remote)'
+      }
+      , right: {
+        role: 'Front-End Developer',
+        description: 'Working as a Senior Angular Developer'
+      }
+    },
+    {
+      left: {
+        company: 'ibpay.ir',
+        date: 'February 2020 - October 2020',
+        location: 'Iran'
+      }
+      , right: {
+        role: 'Front-End Developer',
+        description: 'Working as a Senior Angular Developer'
+      }
+    },
+    {
+      left: {
+        company: 'Nicico (National Iranian Copper Industries)',
+        date: 'February 2018 - February 2020',
+        location: 'Iran'
+      }
+      , right: {
+        role: 'Front-End Developer',
+        description: 'Working as a Senior Angular Developer'
+      }
+    }
+  ];
+
+
   animationCreated(animationItem: AnimationItem): void {
     console.log(animationItem);
   }
