@@ -17,10 +17,10 @@ export class BlogComponent {
 
   blogs = [
     {
-      date: '28 May, 2021',
-      title: 'Getting Started with Competetive programming',
-      imageUrl: './assets/images/blog/test.png',
-      href: 'https://google.com'
+      date: '3 March, 2024',
+      title: 'Improve Performance in your Angular Application (Part 1)',
+      imageUrl: './assets/images/blog/angular.png',
+      href: 'https://sinasiri.hashnode.dev/improve-performance-in-your-angular-application-part-1'
     }
   ]
 }
