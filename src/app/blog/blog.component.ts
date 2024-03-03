@@ -23,4 +23,8 @@ export class BlogComponent {
       href: 'https://sinasiri.hashnode.dev/improve-performance-in-your-angular-application-part-1'
     }
   ]
+
+  onComplete(event: any) {
+    console.log(event)
+  }
 }

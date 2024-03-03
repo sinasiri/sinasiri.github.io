@@ -1,6 +1,6 @@
 <div class="full-stack-development">
   <div class="img">
-    <ng-lottie [options]="options"></ng-lottie>
+    <ng-lottie (complete)="onComplete($event)" [options]="options"></ng-lottie>
   </div>
   <div class="description">
     <div class="title">

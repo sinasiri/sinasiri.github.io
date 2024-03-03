@@ -17,7 +17,7 @@
 
 
 <div class="work-experience-container">
-  <div class="vl"></div>
+  <div class="vl" [ngStyle]="{'height': experiences?.length * 165 + 'px'}"></div>
   <div *ngFor="let ex of experiences" class="experience">
     <div class="left">
       <div class="header">{{ex?.left?.company}}</div>

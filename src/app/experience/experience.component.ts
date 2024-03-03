@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {AnimationItem} from 'lottie-web';
 import {LottieComponent, AnimationOptions} from 'ngx-lottie';
-import {NgFor} from "@angular/common";
+import {NgFor, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [NgFor, LottieComponent],
+  imports: [NgFor, LottieComponent, NgStyle],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
@@ -16,7 +16,7 @@ export class ExperienceComponent implements OnInit {
     path: './assets/animations/experience.json',
   };
 
-  experiences = [
+  experiences: any[] = [
     {
       left: {
         company: 'Data Virtuality GMBH',
@@ -36,7 +36,7 @@ export class ExperienceComponent implements OnInit {
       }
       , right: {
         role: 'Front-End Developer',
-        description: 'Working as a Senior Angular Developer'
+        description: 'Worked as a Senior Angular Developer'
       }
     },
     {
@@ -47,7 +47,40 @@ export class ExperienceComponent implements OnInit {
       }
       , right: {
         role: 'Front-End Developer',
-        description: 'Working as a Senior Angular Developer'
+        description: 'Worked as a Senior Angular Developer'
+      }
+    },
+    {
+      left: {
+        company: 'Maxsa',
+        date: 'July 2018 - February 2019',
+        location: 'Iran'
+      }
+      , right: {
+        role: 'Front-End Developer',
+        description: 'Worked as an Angular Developer'
+      }
+    },
+    {
+      left: {
+        company: 'Fusoft',
+        date: 'March 2016 - June 2018',
+        location: 'Iran'
+      }
+      , right: {
+        role: 'Full-Stack Web Developer',
+        description: 'Worked as a Full-Stack .Net and Angular developer'
+      }
+    },
+    {
+      left: {
+        company: 'Pasargad',
+        date: '2016',
+        location: 'Iran'
+      }
+      , right: {
+        role: 'Mathematics Teacher',
+        description: 'Mathematics and geometry teacher in high school'
       }
     }
   ];
