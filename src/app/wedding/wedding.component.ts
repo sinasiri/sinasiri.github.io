@@ -8,19 +8,20 @@ import {Component} from '@angular/core';
   styleUrl: './wedding.component.scss'
 })
 export class WeddingComponent {
-  openLink = (link: any) => {
-    window.open(link, '_blank')
+  openLink = () => {
+    const url = 'https://www.google.com/maps?q=35.6327291,51.1900181';
+    window.open(url, '_blank')
   }
 
   openInWaze() {
     const latitude = 35.6327291
     const longitude = 51.1900181
     const wazeUrl = `https://waze.com/ul?ll=${latitude},${longitude}&navigate=yes`;
-    window.open(wazeUrl)
+    window.open(wazeUrl, '_blank')
   }
 
   openInNeshan() {
-    window.open('https://neshan.org/maps/places/_bQKkUOxGysW#c35.633-51.191-19z-0p', '_blank')
+    window.open('https://nshn.ir/e97bQKXxGxGy7o', '_blank')
   }
 
 

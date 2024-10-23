@@ -1,45 +1,26 @@
 
 .main {
-
-  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-  );
-
-
-  width: 100%;
-  height: 100vh;
   position: relative;
-  box-shadow: 0 0 100vh 100vh var(--red-to-pink-to-purple-vertical-gradient);
-  display: flex;
 
   video {
     max-width: 480px;
     object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 0 auto;
   }
 
   .main-text {
     position: absolute;
+    top: 50px;
     width: 100%;
-    height: 100%;
-    font-size: 100px;
-    font-weight: lighter;
-
-    img {
-      position: absolute;
-      top: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .buttons {
+    max-width: 480px;
+    margin: 0 auto;
     width: 100%;
     position: absolute;
     bottom: 70px;
