@@ -1,15 +1,19 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-wedding',
   standalone: true,
-  imports: [],
+  imports: [
+    NgIf
+  ],
   templateUrl: './wedding.component.html',
   styleUrl: './wedding.component.scss'
 })
 export class WeddingComponent implements AfterViewInit {
 
 
+  videoLoaded = false;
   openLink = () => {
     const url = 'https://www.google.com/maps?q=35.6327291,51.1900181';
     window.open(url, '_blank')
@@ -24,6 +28,10 @@ export class WeddingComponent implements AfterViewInit {
 
   openInNeshan() {
     window.open('https://nshn.ir/e97bQKXxGxGy7o', '_blank')
+  }
+
+  onVideoLoaded() {
+    this.videoLoaded = true;
   }
 
 

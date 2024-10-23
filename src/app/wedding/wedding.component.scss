@@ -34,7 +34,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 50px;
+    gap: 30px;
 
     img {
       width: 84px;
@@ -56,4 +56,16 @@
   font-size: 16px;
   z-index: 10;
   transition: background-color 0.3s ease;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
 }
