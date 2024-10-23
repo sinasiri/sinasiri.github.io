@@ -27,7 +27,7 @@
 
   .buttons {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -38,4 +38,19 @@
       height: 84px;
     }
   }
+}
+
+.mute-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }

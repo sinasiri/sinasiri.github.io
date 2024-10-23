@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-wedding',
@@ -8,6 +8,8 @@ import {AfterViewInit, Component} from '@angular/core';
   styleUrl: './wedding.component.scss'
 })
 export class WeddingComponent implements AfterViewInit {
+
+
   openLink = () => {
     const url = 'https://www.google.com/maps?q=35.6327291,51.1900181';
     window.open(url, '_blank')
@@ -33,6 +35,14 @@ export class WeddingComponent implements AfterViewInit {
         console.error('Video autoplay prevented', error);
       });
     }
+  }
+
+  isMuted = true; // Start video muted
+
+  toggleMute() {
+    const video: HTMLVideoElement | null = document.querySelector('video');
+    this.isMuted = !this.isMuted;
+    video.muted = this.isMuted;
   }
 
 }

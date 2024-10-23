@@ -2,6 +2,10 @@
   <video autoplay loop muted preload="auto">
     <source src="./assets/wedding/wed.mp4" type="video/mp4">
   </video>
+
+  <button class="mute-button" (click)="toggleMute()">
+    {{ isMuted ? '🔇' : '🔊' }}
+  </button>
   <div class="main-text">
     <img src="./assets/wedding/names.png">
   </div>
