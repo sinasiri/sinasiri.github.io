@@ -28,7 +28,7 @@ export class WeddingComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const video: HTMLVideoElement | null = document.querySelector('video');
     if (video) {
-      video.muted = true;  // Ensure video is muted
+      video.muted = false;  // Ensure video is muted
       video.play().catch(error => {
         console.error('Video autoplay prevented', error);
       });
