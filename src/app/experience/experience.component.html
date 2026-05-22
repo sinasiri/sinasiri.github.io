@@ -18,25 +18,27 @@
 
 <div class="work-experience-container">
   <div class="vl" [ngStyle]="{'height': experiences?.length * 165 + 'px'}"></div>
-  <div *ngFor="let ex of experiences" class="experience">
-    <div class="left">
-      <div class="header">{{ex?.left?.company}}</div>
-      <div class="description">
-        <i>
-          {{ex?.left?.date}}
-        </i>
-        <br>
-        <i> {{ex?.left?.location}}</i>
+  @for (ex of experiences; track ex) {
+    <div class="experience">
+      <div class="left">
+        <div class="header">{{ex?.left?.company}}</div>
+        <div class="description">
+          <i>
+            {{ex?.left?.date}}
+          </i>
+          <br>
+            <i> {{ex?.left?.location}}</i>
+          </div>
+        </div>
+        <div class="middle">
+          <img src="./assets/images/icons/bag.png">
+        </div>
+        <div class="right">
+          <div class="header">{{ex?.right?.role}}</div>
+          <div class="description">
+            {{ex?.right?.description}}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="middle">
-      <img src="./assets/images/icons/bag.png">
-    </div>
-    <div class="right">
-      <div class="header">{{ex?.right?.role}}</div>
-      <div class="description">
-        {{ex?.right?.description}}
-      </div>
-    </div>
+    }
   </div>
-</div>

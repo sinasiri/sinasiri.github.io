@@ -1,9 +1,9 @@
 import {Component, Input} from '@angular/core';
-import {NgIf} from "@angular/common";
+
 
 @Component({
     selector: 'app-cv',
-    imports: [NgIf],
+    imports: [],
     templateUrl: './cv.component.html',
     styleUrl: './cv.component.scss'
 })

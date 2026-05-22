@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {AnimationOptions, LottieComponent} from "ngx-lottie";
-import {NgFor} from "@angular/common";
+
 
 @Component({
     selector: 'app-blog',
-    imports: [LottieComponent, NgFor],
+    imports: [LottieComponent],
     templateUrl: './blog.component.html',
     styleUrl: './blog.component.scss'
 })

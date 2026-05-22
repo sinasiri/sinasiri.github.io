@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {NgFor} from "@angular/common";
+
 
 @Component({
     selector: 'app-social-media',
-    imports: [NgFor],
+    imports: [],
     templateUrl: './social-media.component.html',
     styleUrl: './social-media.component.scss'
 })

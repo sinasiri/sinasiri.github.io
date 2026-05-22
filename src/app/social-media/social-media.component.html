@@ -1,5 +1,5 @@
 <div class="social-media">
-  <ng-container *ngFor="let social of socials">
+  @for (social of socials; track social) {
     <a target="_blank" [href]="social.link"><img [src]="social.imageUrl"></a>
-  </ng-container>
+  }
 </div>

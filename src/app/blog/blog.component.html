@@ -20,11 +20,13 @@
 
 
 <div class="blog-container">
-  <a target="_blank" [href]="blog.href" *ngFor="let blog of blogs" class="blog">
-    <img [src]="blog.imageUrl">
-    <div class="date">{{blog.date}}</div>
-    <div class="title">{{blog.title}}</div>
-  </a>
+  @for (blog of blogs; track blog) {
+    <a target="_blank" [href]="blog.href" class="blog">
+      <img [src]="blog.imageUrl">
+      <div class="date">{{blog.date}}</div>
+      <div class="title">{{blog.title}}</div>
+    </a>
+  }
 </div>
 <div class="more-blogs">
   <a target="_blank" href="https://sinasiri.hashnode.dev/" class="btn"> View More Blogs</a>

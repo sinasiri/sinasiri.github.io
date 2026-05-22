@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {AnimationOptions, LottieComponent} from "ngx-lottie";
-import {NgFor} from "@angular/common";
+
 
 @Component({
     selector: 'app-projects',
-    imports: [LottieComponent, NgFor],
+    imports: [LottieComponent],
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.scss'
 })

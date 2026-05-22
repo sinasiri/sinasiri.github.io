@@ -3,12 +3,12 @@ import {LottieComponent, AnimationOptions} from 'ngx-lottie';
 import {AnimationItem} from 'lottie-web';
 import {SocialMediaComponent} from "../social-media/social-media.component";
 import {CvComponent} from "../cv/cv.component";
-import {CommonModule} from "@angular/common";
+
 import emailjs, {type EmailJSResponseStatus} from '@emailjs/browser';
 
 @Component({
     selector: 'app-contact',
-    imports: [LottieComponent, SocialMediaComponent, CvComponent, CommonModule],
+    imports: [LottieComponent, SocialMediaComponent, CvComponent],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss'
 })

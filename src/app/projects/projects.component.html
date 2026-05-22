@@ -24,14 +24,18 @@
 
 
 <div class="project-container">
-  <div *ngFor="let p of projects" class="project">
-    <div class="title">{{p?.title}}</div>
-    <p class="description">{{p?.description}}</p>
-    <div class="image-container">
-      <img *ngFor="let img of p?.techIcons" [src]="'./assets/images/tech/' + img + '.png'">
+  @for (p of projects; track p) {
+    <div class="project">
+      <div class="title">{{p?.title}}</div>
+      <p class="description">{{p?.description}}</p>
+      <div class="image-container">
+        @for (img of p?.techIcons; track img) {
+          <img [src]="'./assets/images/tech/' + img + '.png'">
+        }
+      </div>
+      <p class="description">Technologies Used: {{p?.technologies}}</p>
+      <a target="_blank" [href]="p?.link">Code</a>
     </div>
-    <p class="description">Technologies Used: {{p?.technologies}}</p>
-    <a target="_blank" [href]="p?.link">Code</a>
-  </div>
+  }
 </div>
 

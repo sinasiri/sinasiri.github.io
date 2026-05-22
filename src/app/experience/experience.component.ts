@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {AnimationItem} from 'lottie-web';
 import {LottieComponent, AnimationOptions} from 'ngx-lottie';
-import {NgFor, NgStyle} from "@angular/common";
+import { NgStyle } from "@angular/common";
 
 @Component({
     selector: 'app-experience',
-    imports: [NgFor, LottieComponent, NgStyle],
+    imports: [LottieComponent, NgStyle],
     templateUrl: './experience.component.html',
     styleUrl: './experience.component.scss'
 })
