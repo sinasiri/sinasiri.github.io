@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {NgFor} from "@angular/common";
 
 @Component({
-  selector: 'app-social-media',
-  standalone: true,
-  imports: [NgFor],
-  templateUrl: './social-media.component.html',
-  styleUrl: './social-media.component.scss'
+    selector: 'app-social-media',
+    imports: [NgFor],
+    templateUrl: './social-media.component.html',
+    styleUrl: './social-media.component.scss'
 })
 export class SocialMediaComponent {
   socials = [

@@ -4,7 +4,6 @@ import {AnimationItem} from "lottie-web";
 
 @Component({
     selector: 'app-education',
-    standalone: true,
     imports: [LottieComponent],
     templateUrl: './education.component.html',
     styleUrl: './education.component.scss'

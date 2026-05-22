@@ -6,11 +6,10 @@ import {SocialMediaComponent} from "../social-media/social-media.component";
 import {CvComponent} from "../cv/cv.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, LottieComponent, SocialMediaComponent, CvComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [CommonModule, LottieComponent, SocialMediaComponent, CvComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

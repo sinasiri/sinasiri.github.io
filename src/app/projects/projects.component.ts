@@ -3,11 +3,10 @@ import {AnimationOptions, LottieComponent} from "ngx-lottie";
 import {NgFor} from "@angular/common";
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [LottieComponent, NgFor],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [LottieComponent, NgFor],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
   options: AnimationOptions = {

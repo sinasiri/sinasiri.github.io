@@ -4,11 +4,10 @@ import {LottieComponent, AnimationOptions} from 'ngx-lottie';
 import {NgFor, NgStyle} from "@angular/common";
 
 @Component({
-  selector: 'app-experience',
-  standalone: true,
-  imports: [NgFor, LottieComponent, NgStyle],
-  templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss'
+    selector: 'app-experience',
+    imports: [NgFor, LottieComponent, NgStyle],
+    templateUrl: './experience.component.html',
+    styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent implements OnInit {
 

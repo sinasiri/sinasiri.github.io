@@ -7,11 +7,10 @@ import {CommonModule} from "@angular/common";
 import emailjs, {type EmailJSResponseStatus} from '@emailjs/browser';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [LottieComponent, SocialMediaComponent, CvComponent, CommonModule],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [LottieComponent, SocialMediaComponent, CvComponent, CommonModule],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
