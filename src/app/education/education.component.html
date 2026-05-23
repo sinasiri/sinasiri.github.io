@@ -1,95 +1,99 @@
 <div class="full-stack-development">
-  <div class="img">
-    <ng-lottie [options]="educationJson" (animationCreated)="animationCreated($event)"></ng-lottie>
-  </div>
+    <div class="img">
+        <app-lottie-player
+                [options]="educationJson"
+                [showPlaceholder]="true">
+            <div placeholder class="loading-spinner">Loading...</div>
+        </app-lottie-player>
+    </div>
 
-  <div class="description">
-    <div class="title">
-      Education & Achievements
+    <div class="description">
+        <div class="title">
+            Education & Achievements
+        </div>
+        <div class="item-container">
+            <div class="item">"Education breeds confidence. Confidence breeds hope. Hope breeds peace." - Confucius</div>
+            <div class="item">"Once you learn to read, you will be forever free." - Frederick Douglass</div>
+            <div class="item"> "The highest result of education is tolerance." - Helen Keller</div>
+        </div>
     </div>
-    <div class="item-container">
-      <div class="item">"Education breeds confidence. Confidence breeds hope. Hope breeds peace." - Confucius</div>
-      <div class="item">"Once you learn to read, you will be forever free." - Frederick Douglass</div>
-      <div class="item"> "The highest result of education is tolerance." - Helen Keller</div>
-    </div>
-  </div>
 </div>
 
 <div class="education-title">
-  <p>My Educational Journey</p>
+    <p>My Educational Journey</p>
 </div>
 
 <div class="card-container">
-  <div class="card">
-    <div class="card-image">
-      <img src="assets/images/education/kharazmi.jpeg">
-    </div>
-    <div class="card-body">
-      <div class="card-header">
-        <div class="card-title">Master's degree in MBA</div>
-        <div class="card-description">
-          Kharazmi University
-          <div class="year">2021 - 2023</div>
+    <div class="card">
+        <div class="card-image">
+            <img src="assets/images/education/kharazmi.jpeg">
         </div>
-      </div>
-      <div class="card-main-description">
-        <ul>
-          <li>Studying finance in MBA.</li>
-          <li>Exploring the intersection of economics and the crypto sphere.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-image">
-      <img src="assets/images/education/ikiu.jpg">
-    </div>
-    <div class="card-body">
-      <div class="card-header">
-        <div class="card-title">Bachelor's degree in Computer Science</div>
-        <div class="card-description">
-          Imam Khomeini International University
-
-          <div class="year">2016-2021</div>
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">Master's degree in MBA</div>
+                <div class="card-description">
+                    Kharazmi University
+                    <div class="year">2021 - 2023</div>
+                </div>
+            </div>
+            <div class="card-main-description">
+                <ul>
+                    <li>Studying finance in MBA.</li>
+                    <li>Exploring the intersection of economics and the crypto sphere.</li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="card-main-description">
-        <ul>
-          <li>Studied Software Engineering major</li>
-          <li>Participant in dynamic programming workshops</li>
-          <li>Participant in the ICPC team</li>
-        </ul>
-
-      </div>
     </div>
-  </div>
 
-
-  <div class="card">
-    <div class="card-image">
-      <img src="assets/images/education/sampad.png">
-    </div>
-    <div class="card-body">
-      <div class="card-header">
-        <div class="card-title">High school diploma in Mathematics and Physics from SAMPAD</div>
-        <div class="card-description">
-          National Organization for Development of Exceptional Talents
-          <div class="year">2012-2016</div>
+    <div class="card">
+        <div class="card-image">
+            <img src="assets/images/education/ikiu.jpg">
         </div>
-      </div>
-      <div class="card-main-description">
-        <ul>
-          <li>Active in the field of Mathematical Olympiad.</li>
-          <li>Ranked among the top participants in the initial stage of the Math and Computer Olympiad.</li>
-          <li>Nominee for the top candidates of the Kharazmi Festival competition</li>
-          <li>The winner of the "Paya" scientific competition and qualified for the advanced course of the competition
-          </li>
-          <li>Earned qualification for the national-level Sharif student competition.</li>
-        </ul>
-      </div>
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">Bachelor's degree in Computer Science</div>
+                <div class="card-description">
+                    Imam Khomeini International University
+
+                    <div class="year">2016-2021</div>
+                </div>
+            </div>
+            <div class="card-main-description">
+                <ul>
+                    <li>Studied Software Engineering major</li>
+                    <li>Participant in dynamic programming workshops</li>
+                    <li>Participant in the ICPC team</li>
+                </ul>
+
+            </div>
+        </div>
     </div>
-  </div>
+
+
+    <div class="card">
+        <div class="card-image">
+            <img src="assets/images/education/sampad.png">
+        </div>
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">High school diploma in Mathematics and Physics from SAMPAD</div>
+                <div class="card-description">
+                    National Organization for Development of Exceptional Talents
+                    <div class="year">2012-2016</div>
+                </div>
+            </div>
+            <div class="card-main-description">
+                <ul>
+                    <li>Active in the field of Mathematical Olympiad.</li>
+                    <li>Ranked among the top participants in the initial stage of the Math and Computer Olympiad.</li>
+                    <li>Nominee for the top candidates of the Kharazmi Festival competition</li>
+                    <li>The winner of the "Paya" scientific competition and qualified for the advanced course of the competition
+                    </li>
+                    <li>Earned qualification for the national-level Sharif student competition.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 </div>

@@ -6,9 +6,9 @@ import player from 'lottie-web';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideLottieOptions({
-      player: () => player,
-    }),
+    // provideLottieOptions({
+    //   player: () => player,
+    // }),
     provideCacheableAnimationLoader(),
     provideRouter(routes)]
 };

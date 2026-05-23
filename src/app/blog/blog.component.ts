@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
-import {AnimationOptions, LottieComponent} from "ngx-lottie";
+import {AnimationOptions} from "ngx-lottie";
+import {LottiePlayerComponent} from "../lottie-player/lottie-player.component";
 
 
 @Component({
     selector: 'app-blog',
-    imports: [LottieComponent],
+    imports: [ LottiePlayerComponent],
     templateUrl: './blog.component.html',
     styleUrl: './blog.component.scss'
 })

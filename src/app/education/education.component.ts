@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {AnimationOptions, LottieComponent} from "ngx-lottie";
+import {AnimationOptions} from "ngx-lottie";
 import {AnimationItem} from "lottie-web";
+import {LottiePlayerComponent} from "../lottie-player/lottie-player.component";
 
 @Component({
     selector: 'app-education',
-    imports: [LottieComponent],
+    imports: [LottiePlayerComponent],
     templateUrl: './education.component.html',
     styleUrl: './education.component.scss'
 })

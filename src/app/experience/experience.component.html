@@ -1,44 +1,84 @@
 <div class="full-stack-development">
-  <div class="img">
-    <ng-lottie [options]="experienceJson" (animationCreated)="animationCreated($event)"></ng-lottie>
-  </div>
 
-  <div class="description">
-    <div class="title">
-      Experience
+    <div class="img">
+        <app-lottie-player
+                [options]="experienceJson"
+                [showPlaceholder]="true">
+            <div placeholder class="loading-spinner">Loading...</div>
+        </app-lottie-player>
     </div>
-    <div class="item-container">
-      <div class="item">"Success is the ability to go from failure to failure without losing your enthusiasm."</div>
+
+    <div class="description">
+        <div class="title">
+            Experience
+        </div>
+
+        <div class="item-container">
+            <div class="item">
+                "Success is the ability to go from failure to failure without losing your enthusiasm."
+            </div>
+        </div>
     </div>
-  </div>
+
 </div>
 
-<p class="title-middle">Work Experience</p>
-
+<p class="title-middle">
+    Work Experience
+</p>
 
 <div class="work-experience-container">
-  <div class="vl" [ngStyle]="{'height': experiences?.length * 165 + 'px'}"></div>
-  @for (ex of experiences; track ex) {
-    <div class="experience">
-      <div class="left">
-        <div class="header">{{ex?.left?.company}}</div>
-        <div class="description">
-          <i>
-            {{ex?.left?.date}}
-          </i>
-          <br>
-            <i> {{ex?.left?.location}}</i>
-          </div>
+
+    <div
+            class="vl"
+            [ngStyle]="{'height': experiences?.length * 165 + 'px'}">
+    </div>
+
+    @for (ex of experiences; track ex) {
+
+        <div class="experience">
+
+            <div class="left">
+
+                <div class="header">
+                    {{ ex?.left?.company }}
+                </div>
+
+                <div class="description">
+
+                    <i>
+                        {{ ex?.left?.date }}
+                    </i>
+
+                    <br>
+
+                    <i>
+                        {{ ex?.left?.location }}
+                    </i>
+
+                </div>
+
+            </div>
+
+            <div class="middle">
+                <img
+                        src="./assets/images/icons/bag.png"
+                        alt="Work experience icon">
+            </div>
+
+            <div class="right">
+
+                <div class="header">
+                    {{ ex?.right?.role }}
+                </div>
+
+                <div class="description">
+                    {{ ex?.right?.description }}
+                </div>
+
+            </div>
+
         </div>
-        <div class="middle">
-          <img src="./assets/images/icons/bag.png">
-        </div>
-        <div class="right">
-          <div class="header">{{ex?.right?.role}}</div>
-          <div class="description">
-            {{ex?.right?.description}}
-          </div>
-        </div>
-      </div>
+
     }
-  </div>
+
+</div>

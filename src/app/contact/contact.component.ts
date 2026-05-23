@@ -1,49 +1,41 @@
 import {Component} from '@angular/core';
-import {LottieComponent, AnimationOptions} from 'ngx-lottie';
-import {AnimationItem} from 'lottie-web';
+import {AnimationOptions} from 'ngx-lottie';
 import {SocialMediaComponent} from "../social-media/social-media.component";
 import {CvComponent} from "../cv/cv.component";
 
 import emailjs, {type EmailJSResponseStatus} from '@emailjs/browser';
+import {LottiePlayerComponent} from "../lottie-player/lottie-player.component";
 
 @Component({
     selector: 'app-contact',
-    imports: [LottieComponent, SocialMediaComponent, CvComponent],
+    imports: [SocialMediaComponent, CvComponent, LottiePlayerComponent],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
+    options: AnimationOptions = {
+        path: './assets/animations/email.json',
+    };
 
-  constructor() {
-  }
+    emailOptions: AnimationOptions = {
+        path: './assets/animations/hired.json',
+    };
 
-  options: AnimationOptions = {
-    path: './assets/animations/email.json',
-  };
+    public sendEmail(e: Event) {
+        e.preventDefault();
 
-  emailOptions: AnimationOptions = {
-    path: './assets/animations/hired.json',
-  };
-
-  animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
-  }
-
-  public sendEmail(e: Event) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_pny4p72', 'template_942o93h', e.target as HTMLFormElement, {
-        publicKey: 'wNSvEvW-xyTosfCwz',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', (error as EmailJSResponseStatus).text);
-        },
-      );
-  }
+        emailjs
+            .sendForm('service_pny4p72', 'template_942o93h', e.target as HTMLFormElement, {
+                publicKey: 'wNSvEvW-xyTosfCwz',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', (error as EmailJSResponseStatus).text);
+                },
+            );
+    }
 }

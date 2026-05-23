@@ -1,25 +1,72 @@
-<div class="header-container">
-  <div class="sign">
-    <span>Sina Nasiri</span>
-  </div>
-  <ul class="menu-items">
-    <li class="item">
-      <a routerLink="/" class="home">Home</a>
-    </li>
-    <li class="item">
-      <a routerLink="/education" class="edu">Education and Achievements</a>
-    </li>
-    <li class="item">
-      <a routerLink="/experience" class="xp">Experience</a>
-    </li>
-    <li class="item">
-      <a routerLink="/projects" class="pr">Projects</a>
-    </li>
-    <li class="item">
-      <a routerLink="/blog" class="home">Blogs</a>
-    </li>
-    <li class="item">
-      <a routerLink="/contact" class="con">Contact</a>
-    </li>
-  </ul>
-</div>
+<header class="header-container">
+
+    <nav aria-label="Main Navigation">
+
+        <div class="sign">
+            <a routerLink="/" class="logo">
+                Sina Nasiri
+            </a>
+        </div>
+
+        <ul class="menu-items">
+
+            <li class="item">
+                <a
+                        routerLink="/"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                        class="home">
+                    Home
+                </a>
+            </li>
+
+            <li class="item">
+                <a
+                        routerLink="/education"
+                        routerLinkActive="active"
+                        class="edu">
+                    Education and Achievements
+                </a>
+            </li>
+
+            <li class="item">
+                <a
+                        routerLink="/experience"
+                        routerLinkActive="active"
+                        class="xp">
+                    Experience
+                </a>
+            </li>
+
+            <li class="item">
+                <a
+                        routerLink="/projects"
+                        routerLinkActive="active"
+                        class="pr">
+                    Projects
+                </a>
+            </li>
+
+            <li class="item">
+                <a
+                        routerLink="/blog"
+                        routerLinkActive="active"
+                        class="blog">
+                    Blogs
+                </a>
+            </li>
+
+            <li class="item">
+                <a
+                        routerLink="/contact"
+                        routerLinkActive="active"
+                        class="con">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>

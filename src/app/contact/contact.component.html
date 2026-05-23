@@ -1,6 +1,10 @@
 <div class="full-stack-development">
   <div class="img">
-    <ng-lottie [options]="options"></ng-lottie>
+      <app-lottie-player
+              [options]="options"
+              [showPlaceholder]="true">
+          <div placeholder class="loading-spinner">Loading...</div>
+      </app-lottie-player>
   </div>
   <div class="description">
     <div class="title">
@@ -39,6 +43,10 @@
   </div>
 
   <div class="img">
-    <ng-lottie [options]="emailOptions"></ng-lottie>
+      <app-lottie-player
+              [options]="emailOptions"
+              [showPlaceholder]="true">
+          <div placeholder class="loading-spinner">Loading...</div>
+      </app-lottie-player>
   </div>
 </div>
