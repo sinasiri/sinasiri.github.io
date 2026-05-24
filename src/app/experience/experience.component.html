@@ -1,84 +1,127 @@
-<div class="full-stack-development">
+<!-- experience.component.html -->
 
-    <div class="img">
-        <app-lottie-player
-                [options]="experienceJson"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
-    </div>
+<section class="experience-hero-section">
 
-    <div class="description">
-        <div class="title">
-            Experience
-        </div>
+    <div class="experience-hero-container">
 
-        <div class="item-container">
-            <div class="item">
-                "Success is the ability to go from failure to failure without losing your enthusiasm."
-            </div>
-        </div>
-    </div>
+        <div class="experience-animation">
 
-</div>
+            <app-lottie-player
+                    [options]="experienceJson"
+                    [showPlaceholder]="true">
 
-<p class="title-middle">
-    Work Experience
-</p>
-
-<div class="work-experience-container">
-
-    <div
-            class="vl"
-            [ngStyle]="{'height': experiences?.length * 165 + 'px'}">
-    </div>
-
-    @for (ex of experiences; track ex) {
-
-        <div class="experience">
-
-            <div class="left">
-
-                <div class="header">
-                    {{ ex?.left?.company }}
+                <div placeholder class="loading-spinner">
+                    Loading...
                 </div>
 
-                <div class="description">
-
-                    <i>
-                        {{ ex?.left?.date }}
-                    </i>
-
-                    <br>
-
-                    <i>
-                        {{ ex?.left?.location }}
-                    </i>
-
-                </div>
-
-            </div>
-
-            <div class="middle">
-                <img
-                        src="./assets/images/icons/bag.png"
-                        alt="Work experience icon">
-            </div>
-
-            <div class="right">
-
-                <div class="header">
-                    {{ ex?.right?.role }}
-                </div>
-
-                <div class="description">
-                    {{ ex?.right?.description }}
-                </div>
-
-            </div>
+            </app-lottie-player>
 
         </div>
 
-    }
+        <div class="experience-content">
 
-</div>
+            <p class="section-label">
+                Professional Experience
+            </p>
+
+            <h1>
+                Work Experience
+            </h1>
+
+            <p class="experience-description">
+                My professional journey includes full-stack development,
+                backend engineering, cloud infrastructure, and modern web application
+                development across multiple projects and industries.
+            </p>
+
+            <blockquote class="experience-quote">
+                “Success is the ability to go from failure to failure
+                without losing your enthusiasm.”
+            </blockquote>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="timeline-section">
+
+    <div class="section-header">
+
+        <h2>
+            Career Timeline
+        </h2>
+
+        <p>
+            A timeline of my software engineering experience,
+            technical roles, and professional growth.
+        </p>
+
+    </div>
+
+    <div class="timeline-container">
+
+        @for (ex of experiences; track ex) {
+
+            <article class="timeline-item">
+
+                <!-- Timeline Dot -->
+
+                <div class="timeline-dot">
+
+                    <img
+                            src="./assets/images/icons/bag.png"
+                            alt="Work Experience Icon"
+                            loading="lazy"
+                    >
+
+                </div>
+
+                <!-- Left Side -->
+
+                <div class="timeline-left">
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            {{ ex?.left?.company }}
+                        </h3>
+
+                        <p class="timeline-date">
+                            {{ ex?.left?.date }}
+                        </p>
+
+                        <p class="timeline-location">
+                            {{ ex?.left?.location }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+
+                <div class="timeline-right">
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            {{ ex?.right?.role }}
+                        </h3>
+
+                        <p class="timeline-description">
+                            {{ ex?.right?.description }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        }
+
+    </div>
+
+</section>

@@ -1,84 +1,72 @@
-import { Component, Input, Output, EventEmitter, OnInit, Inject, PLATFORM_ID, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
-import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { AnimationOptions } from 'ngx-lottie';
+import {Component, Input, Output, EventEmitter, input, computed, inject} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {LottieComponent, AnimationOptions, LottieTransferState} from 'ngx-lottie';
 
 @Component({
     selector: 'app-lottie-player',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, LottieComponent],
     template: `
         <div class="lottie-container">
-            <div #lottieContainer></div>
-            @if (!isBrowser && showPlaceholder) {
-                <div class="lottie-placeholder">
-                    <ng-content select="[placeholder]"></ng-content>
-                </div>
-            }
+            <ng-lottie
+                    [options]="computedOption()"
+                    (complete)="complete.emit($event)"
+                    (configReady)="onConfigReady()"
+                    (dataReady)="onDataReady()"
+                    (domLoaded)="onDomLoaded()"
+                    (error)="onError($event)">
+            </ng-lottie>
         </div>
     `,
     styles: [`
       .lottie-container {
         width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        height: 300px;
+        display: block;
       }
 
-      .lottie-placeholder {
+      ng-lottie {
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
       }
     `]
 })
-export class LottiePlayerComponent implements OnInit {
-    @Input() options!: AnimationOptions;
-    @Input() showPlaceholder = false;
-
+export class LottiePlayerComponent {
+    options = input<AnimationOptions>();
+    showPlaceholder = input<boolean>(false);
     @Output() complete = new EventEmitter<any>();
-    @Output() loopComplete = new EventEmitter<any>();
-    @Output() enterFrame = new EventEmitter<any>();
 
-    @ViewChild('lottieContainer', { read: ViewContainerRef })
-    lottieContainer!: ViewContainerRef;
+    lottieTransferState = inject(LottieTransferState);
 
-    isBrowser = false;
-    private lottieComponentRef?: ComponentRef<any>;
+    computedOption = computed(() => {
+        const opts = this.options();
+        const path = (opts as any).path; // ← Type assertion
+        const cachedData = this.lottieTransferState.get(path);
 
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-        this.isBrowser = isPlatformBrowser(this.platformId);
-    }
 
-    async ngOnInit() {
-        if (this.isBrowser) {
-            // Dynamically import LottieComponent only in browser
-            const { LottieComponent } = await import('ngx-lottie');
-
-            // Create the component dynamically
-            this.lottieComponentRef = this.lottieContainer.createComponent(LottieComponent);
-
-            // Set inputs
-            this.lottieComponentRef.setInput('options', this.options);
-
-            // Subscribe to outputs
-            this.lottieComponentRef.instance.complete.subscribe((event: any) => {
-                this.complete.emit(event);
-            });
-
-            this.lottieComponentRef.instance.loopComplete.subscribe((event: any) => {
-                this.loopComplete.emit(event);
-            });
-
-            this.lottieComponentRef.instance.enterFrame.subscribe((event: any) => {
-                this.enterFrame.emit(event);
-            });
+        // If cached data exists (SSR), use it; otherwise use the original options
+        if (cachedData) {
+            return { animationData: cachedData };
         }
+
+        // Fallback to original options (with path)
+        return opts;
+    });
+
+    onConfigReady() {
+        console.log('✅ Lottie config ready');
     }
 
-    ngOnDestroy() {
-        this.lottieComponentRef?.destroy();
+    onDataReady() {
+        console.log('✅ Lottie data loaded');
+    }
+
+    onDomLoaded() {
+        console.log('✅ Lottie DOM loaded');
+    }
+
+    onError(error: any) {
+        console.error('❌ Lottie error:', error);
     }
 }

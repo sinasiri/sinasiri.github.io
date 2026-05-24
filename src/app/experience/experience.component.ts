@@ -3,17 +3,12 @@ import {
     OnInit,
 } from '@angular/core';
 
-import {
-    NgStyle
-} from '@angular/common';
-
 import {LottiePlayerComponent} from "../lottie-player/lottie-player.component";
 
 @Component({
     selector: 'app-experience',
     standalone: true,
     imports: [
-        NgStyle,
         LottiePlayerComponent
     ],
     templateUrl: './experience.component.html',

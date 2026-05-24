@@ -1,39 +1,109 @@
-<div class="full-stack-development">
-    <div class="img">
-        <app-lottie-player
-                [options]="options"
-                (complete)="onComplete($event)"
-                [showPlaceholder]="true"
-        >
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
-    </div>
-    <div class="description">
-        <div class="title">
-            My Blogs
+<!-- blogs.component.html -->
+
+<section class="blogs-hero-section">
+    <div class="blogs-hero-container">
+
+        <div class="blogs-animation">
+            <app-lottie-player
+                    [options]="options"
+                    (complete)="onComplete($event)"
+                    [showPlaceholder]="true">
+
+                <div placeholder class="loading-spinner">
+                    Loading...
+                </div>
+            </app-lottie-player>
         </div>
-        <div class="item-container">
-            <div class="item">"A person who never made a mistake never tried anything new"</div>
-            <div class="item">"I’m a big believer in sharing my failures as well as my successes, so (readers) know what works
-                and what doesn’t"
-            </div>
-            <div class="item">"Tell a story. Make it true. Make it compelling. And make it relevant"</div>
+
+        <div class="blogs-content">
+            <p class="section-label">Knowledge Sharing</p>
+
+            <h2>
+                My Blogs & Technical Articles
+            </h2>
+
+            <p class="blogs-description">
+                I write about software engineering, Angular, Spring Boot,
+                cloud infrastructure, clean architecture, and modern web development.
+            </p>
+
+            <ul class="quote-list">
+                <li>
+                    “A person who never made a mistake never tried anything new.”
+                </li>
+
+                <li>
+                    “I believe in sharing failures as much as successes so readers
+                    understand what truly works.”
+                </li>
+
+                <li>
+                    “Tell a story. Make it true. Make it compelling. And make it relevant.”
+                </li>
+            </ul>
         </div>
+
     </div>
-</div>
+</section>
 
-<h1 class="blogs-title">My Latest Blogs</h1>
+<section class="latest-blogs-section">
 
+    <div class="section-header">
+        <h2>Latest Blog Posts</h2>
 
-<div class="blog-container">
-    @for (blog of blogs; track blog) {
-        <a target="_blank" [href]="blog.href" class="blog">
-            <img [src]="blog.imageUrl">
-            <div class="date">{{ blog.date }}</div>
-            <div class="title">{{ blog.title }}</div>
+        <p>
+            Explore articles, tutorials, and insights about modern software
+            development and engineering practices.
+        </p>
+    </div>
+
+    <div class="blog-grid">
+
+        @for (blog of blogs; track blog) {
+
+            <article class="blog-card">
+
+                <a
+                        [href]="blog.href"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        [attr.aria-label]="blog.title">
+
+                    <img
+                            [src]="blog.imageUrl"
+                            [alt]="blog.title"
+                            loading="lazy"
+                    >
+
+                    <div class="blog-card-content">
+
+                        <time class="blog-date">
+                            {{ blog.date }}
+                        </time>
+
+                        <h3 class="blog-title">
+                            {{ blog.title }}
+                        </h3>
+
+                    </div>
+
+                </a>
+
+            </article>
+        }
+
+    </div>
+
+    <div class="more-blogs">
+        <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://sinasiri.hashnode.dev/"
+                class="btn">
+
+            View More Blogs
+
         </a>
-    }
-</div>
-<div class="more-blogs">
-    <a target="_blank" href="https://sinasiri.hashnode.dev/" class="btn"> View More Blogs</a>
-</div>
+    </div>
+
+</section>

@@ -1,87 +1,110 @@
-<div class="home-container">
-    <div class="bio">
-        <p class="me">✌🏻 Hi There! I'm Sina Nasiri</p>
-        <p class="bio-explain">
-            I am <span>Software Developer</span>. I craft Digital Solutions as a <span>Software Engineer</span>.
+<!-- home.component.html -->
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="bio">
+            <p class="tagline">✌🏻 Hi There! I'm Sina Nasiri</p>
+
+            <h1>
+                Full-Stack Software Engineer &
+                <span>Digital Solution Architect</span>
+            </h1>
+
+            <p class="bio-description">
+                I design and develop scalable web applications using Angular,
+                Spring Boot, cloud technologies, and modern software engineering
+                practices.
+            </p>
+
+            <div class="hero-actions">
+                <app-social-media></app-social-media>
+                <app-cv></app-cv>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <app-lottie-player
+                    [options]="options"
+                    [showPlaceholder]="true">
+                <div placeholder class="loading-spinner">Loading...</div>
+            </app-lottie-player>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <header class="section-header">
+        <h2>What Can I Do For You?</h2>
+        <p>
+            Building scalable, responsive, and modern software solutions
+            tailored for businesses and startups.
         </p>
-        <app-social-media></app-social-media>
-        <app-cv></app-cv>
-    </div>
-    <div class="image">
-        <app-lottie-player
-                [options]="options"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
+    </header>
 
-    </div>
-</div>
-<div class="can-i-do">
-    <p>What Can I Do For You?</p>
-</div>
+    <!-- Full Stack -->
+    <article class="service-card">
+        <div class="service-image">
+            <app-lottie-player
+                    [options]="backEndOptions"
+                    [showPlaceholder]="true">
+                <div placeholder class="loading-spinner">Loading...</div>
+            </app-lottie-player>
+        </div>
 
-<div class="full-stack-development">
-    <div class="img">
-        <app-lottie-player
-                [options]="backEndOptions"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
-    </div>
-    <div class="description">
-        <div class="title">
-            Full-Stack Development
-        </div>
-        <div class="item-container">
-            <div class="item">⚡ Proficient in Backend Develpment using Spring Boot</div>
-            <div class="item">⚡ Building responsive website front end using Angular</div>
-            <div class="item">⚡ Hands-on experience with various front-end libraries, including D3.js</div>
-            <div class="item"> ⚡ Advanced Understanding of OOP Concepts</div>
+        <div class="service-content">
+            <h3>Full-Stack Development</h3>
 
-            <div class="item"> ⚡ Well-Versed in Testing and Debugging Methods</div>
+            <ul class="service-list">
+                <li>Proficient in backend development using Spring Boot</li>
+                <li>Building responsive front-end applications with Angular</li>
+                <li>Hands-on experience with D3.js and modern UI libraries</li>
+                <li>Strong understanding of Object-Oriented Programming (OOP)</li>
+                <li>Experience with testing, debugging, and optimization</li>
+                <li>Analytical problem-solving and logical thinking skills</li>
+            </ul>
+        </div>
+    </article>
 
-            <div class="item"> ⚡ Capable Problem Solver with Strong Logical Aptitude</div>
-        </div>
-    </div>
-</div>
+    <!-- Cloud -->
+    <article class="service-card reverse">
+        <div class="service-content">
+            <h3>Cloud Infrastructure & DevOps</h3>
 
-<div style="margin-top: 100px" class="full-stack-development">
-    <div class="description">
-        <div class="title">
-            Cloud Infra-Architecture
+            <ul class="service-list">
+                <li>Experience with cloud services and infrastructure basics</li>
+                <li>Website hosting, deployment, and server management</li>
+                <li>Continuous Integration and DevOps workflows</li>
+                <li>Linux system administration knowledge</li>
+                <li>Understanding REST APIs and web services architecture</li>
+            </ul>
         </div>
-        <div class="item-container">
-            <div class="item">⚡ Limited Hands-on Experience with Cloud Services from Different Providers</div>
-            <div class="item">⚡ Experience in hosting and managing websites</div>
-            <div class="item">⚡ Experience with Continuous Integration and DevOps</div>
-            <div class="item">⚡ Understanding the Linux OS</div>
-            <div class="item">⚡ Divine Knowledge in Web Services and APIs</div>
+
+        <div class="service-image">
+            <app-lottie-player
+                    [options]="cloudOptions"
+                    [showPlaceholder]="true">
+                <div placeholder class="loading-spinner">Loading...</div>
+            </app-lottie-player>
         </div>
-    </div>
-    <div class="img">
-        <app-lottie-player
-                [options]="cloudOptions"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
-    </div>
-</div>
-<div style="margin-top: 100px;margin-bottom: 50px" class="full-stack-development">
-    <div class="img">
-        <app-lottie-player
-                [options]="cryptoOptions"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
-    </div>
-    <div class="description">
-        <div class="title">
-            BlockChain and Web 3.0
+    </article>
+
+    <!-- Blockchain -->
+    <article class="service-card">
+        <div class="service-image">
+            <app-lottie-player
+                    [options]="cryptoOptions"
+                    [showPlaceholder]="true">
+                <div placeholder class="loading-spinner">Loading...</div>
+            </app-lottie-player>
         </div>
-        <div class="item-container">
-            <div class="item">⚡ Enthusiastic about exploring and collaborating with Web3.0 and blockchain technologies</div>
-            <div class="item">⚡ Limited Hands-on Experience with Web3.0 and BlockChain Development</div>
-            <div class="item">⚡ Basic familiarity with Smart Contracts</div>
+
+        <div class="service-content">
+            <h3>Blockchain & Web 3.0</h3>
+
+            <ul class="service-list">
+                <li>Passionate about blockchain and Web3 technologies</li>
+                <li>Basic hands-on experience with blockchain development</li>
+                <li>Familiar with smart contracts and decentralized systems</li>
+            </ul>
         </div>
-    </div>
-</div>
+    </article>
+</section>

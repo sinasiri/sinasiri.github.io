@@ -1,99 +1,210 @@
-<div class="full-stack-development">
-    <div class="img">
-        <app-lottie-player
-                [options]="educationJson"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
-    </div>
+<!-- education.component.html -->
 
-    <div class="description">
-        <div class="title">
-            Education & Achievements
-        </div>
-        <div class="item-container">
-            <div class="item">"Education breeds confidence. Confidence breeds hope. Hope breeds peace." - Confucius</div>
-            <div class="item">"Once you learn to read, you will be forever free." - Frederick Douglass</div>
-            <div class="item"> "The highest result of education is tolerance." - Helen Keller</div>
-        </div>
-    </div>
-</div>
+<section class="education-hero-section">
 
-<div class="education-title">
-    <p>My Educational Journey</p>
-</div>
+    <div class="education-hero-container">
 
-<div class="card-container">
-    <div class="card">
-        <div class="card-image">
-            <img src="assets/images/education/kharazmi.jpeg">
-        </div>
-        <div class="card-body">
-            <div class="card-header">
-                <div class="card-title">Master's degree in MBA</div>
-                <div class="card-description">
-                    Kharazmi University
-                    <div class="year">2021 - 2023</div>
+        <div class="education-animation">
+            <app-lottie-player
+                    [options]="educationJson"
+                    [showPlaceholder]="true">
+
+                <div placeholder class="loading-spinner">
+                    Loading...
                 </div>
-            </div>
-            <div class="card-main-description">
-                <ul>
-                    <li>Studying finance in MBA.</li>
-                    <li>Exploring the intersection of economics and the crypto sphere.</li>
-                </ul>
-            </div>
+
+            </app-lottie-player>
         </div>
+
+        <div class="education-content">
+
+            <p class="section-label">
+                Education & Achievements
+            </p>
+
+            <h1>
+                My Educational Journey
+            </h1>
+
+            <p class="education-description">
+                My academic journey combines software engineering, business strategy,
+                mathematics, and problem-solving — helping me build both technical
+                expertise and analytical thinking.
+            </p>
+
+            <ul class="quote-list">
+                <li>
+                    “Education breeds confidence. Confidence breeds hope. Hope breeds peace.”
+                    — Confucius
+                </li>
+
+                <li>
+                    “Once you learn to read, you will be forever free.”
+                    — Frederick Douglass
+                </li>
+
+                <li>
+                    “The highest result of education is tolerance.”
+                    — Helen Keller
+                </li>
+            </ul>
+
+        </div>
+
     </div>
 
-    <div class="card">
-        <div class="card-image">
-            <img src="assets/images/education/ikiu.jpg">
-        </div>
-        <div class="card-body">
-            <div class="card-header">
-                <div class="card-title">Bachelor's degree in Computer Science</div>
-                <div class="card-description">
-                    Imam Khomeini International University
+</section>
 
-                    <div class="year">2016-2021</div>
+<section class="timeline-section">
+
+    <div class="section-header">
+
+        <h2>
+            Education Timeline
+        </h2>
+
+        <p>
+            A summary of my academic background, achievements,
+            and educational milestones.
+        </p>
+
+    </div>
+
+    <div class="timeline-container">
+
+        <!-- MBA -->
+
+        <article class="education-card">
+
+            <div class="education-logo">
+                <img
+                        src="assets/images/education/kharazmi.jpeg"
+                        alt="Kharazmi University Logo"
+                        loading="lazy"
+                >
+            </div>
+
+            <div class="education-card-body">
+
+                <header class="education-card-header">
+
+                    <h3>
+                        Master's Degree in MBA
+                    </h3>
+
+                    <p class="university-name">
+                        Kharazmi University
+                    </p>
+
+                    <time>
+                        2021 - 2023
+                    </time>
+
+                </header>
+
+                <div class="education-card-content">
+
+                    <ul>
+                        <li>Studied finance and business strategy in MBA.</li>
+                        <li>Explored economics and blockchain technology intersections.</li>
+                    </ul>
+
                 </div>
-            </div>
-            <div class="card-main-description">
-                <ul>
-                    <li>Studied Software Engineering major</li>
-                    <li>Participant in dynamic programming workshops</li>
-                    <li>Participant in the ICPC team</li>
-                </ul>
 
             </div>
-        </div>
-    </div>
 
+        </article>
 
-    <div class="card">
-        <div class="card-image">
-            <img src="assets/images/education/sampad.png">
-        </div>
-        <div class="card-body">
-            <div class="card-header">
-                <div class="card-title">High school diploma in Mathematics and Physics from SAMPAD</div>
-                <div class="card-description">
-                    National Organization for Development of Exceptional Talents
-                    <div class="year">2012-2016</div>
+        <!-- Computer Science -->
+
+        <article class="education-card">
+
+            <div class="education-logo">
+                <img
+                        src="assets/images/education/ikiu.jpg"
+                        alt="Imam Khomeini International University Logo"
+                        loading="lazy"
+                >
+            </div>
+
+            <div class="education-card-body">
+
+                <header class="education-card-header">
+
+                    <h3>
+                        Bachelor's Degree in Computer Science
+                    </h3>
+
+                    <p class="university-name">
+                        Imam Khomeini International University
+                    </p>
+
+                    <time>
+                        2016 - 2021
+                    </time>
+
+                </header>
+
+                <div class="education-card-content">
+
+                    <ul>
+                        <li>Specialized in Software Engineering.</li>
+                        <li>Participated in dynamic programming workshops.</li>
+                        <li>Member of the ICPC competitive programming team.</li>
+                    </ul>
+
                 </div>
+
             </div>
-            <div class="card-main-description">
-                <ul>
-                    <li>Active in the field of Mathematical Olympiad.</li>
-                    <li>Ranked among the top participants in the initial stage of the Math and Computer Olympiad.</li>
-                    <li>Nominee for the top candidates of the Kharazmi Festival competition</li>
-                    <li>The winner of the "Paya" scientific competition and qualified for the advanced course of the competition
-                    </li>
-                    <li>Earned qualification for the national-level Sharif student competition.</li>
-                </ul>
+
+        </article>
+
+        <!-- High School -->
+
+        <article class="education-card">
+
+            <div class="education-logo">
+                <img
+                        src="assets/images/education/sampad.png"
+                        alt="SAMPAD School Logo"
+                        loading="lazy"
+                >
             </div>
-        </div>
+
+            <div class="education-card-body">
+
+                <header class="education-card-header">
+
+                    <h3>
+                        High School Diploma in Mathematics & Physics
+                    </h3>
+
+                    <p class="university-name">
+                        National Organization for Development of Exceptional Talents (SAMPAD)
+                    </p>
+
+                    <time>
+                        2012 - 2016
+                    </time>
+
+                </header>
+
+                <div class="education-card-content">
+
+                    <ul>
+                        <li>Active participant in Mathematical Olympiad programs.</li>
+                        <li>Ranked among top students in Math & Computer Olympiads.</li>
+                        <li>Nominated for Kharazmi Festival competition.</li>
+                        <li>Winner of the "Paya" scientific competition.</li>
+                        <li>Qualified for the national Sharif student competition.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </article>
+
     </div>
 
-
-</div>
+</section>

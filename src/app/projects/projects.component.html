@@ -1,45 +1,134 @@
-<div class="full-stack-development">
-    <div class="img">
-        <app-lottie-player
-                [options]="options"
-                [showPlaceholder]="true">
-            <div placeholder class="loading-spinner">Loading...</div>
-        </app-lottie-player>
+<!-- projects.component.html -->
+
+<section class="projects-hero-section">
+
+    <div class="projects-hero-container">
+
+        <div class="projects-animation">
+
+            <app-lottie-player
+                    [options]="options"
+                    [showPlaceholder]="true">
+
+                <div placeholder class="loading-spinner">
+                    Loading...
+                </div>
+
+            </app-lottie-player>
+
+        </div>
+
+        <div class="projects-content">
+
+            <p class="section-label">
+                Portfolio & Open Source
+            </p>
+
+            <h1>
+                Projects
+            </h1>
+
+            <p class="projects-description">
+                A collection of software engineering projects, open-source work,
+                and technical solutions built using modern web technologies,
+                scalable backend systems, and cloud infrastructure.
+            </p>
+
+            <ul class="quote-list">
+
+                <li>
+                    “Success is the delivery of a product that meets expectations.”
+                </li>
+
+                <li>
+                    Every project is an opportunity to learn, solve problems,
+                    and innovate.
+                </li>
+
+                <li>
+                    Challenges in projects create experience, resilience,
+                    and better engineering decisions.
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
-    <div class="description">
-        <div class="title">
-            Projects
-        </div>
-        <div class="item-container">
-            <div class="item"> “Success is the delivery of a product that meets expectation”
-            </div>
-            <div class="item"> Every project is an opportunity to learn, to figure out problems and challenges, to invent and
-                reinvent.
-            </div>
-            <div class="item"> Every project has challenges, and every project has its rewards.The bad experiences make you
-                stronger and makes you focus on the next projec
-            </div>
-        </div>
+
+</section>
+
+<section class="open-source-section">
+
+    <div class="section-header">
+
+        <h2>
+            My Open Source Commitments
+        </h2>
+
+        <p>
+            Explore my software projects, technical experiments,
+            and contributions to modern application development.
+        </p>
+
     </div>
-</div>
 
-<p class="title-middle">My Open Source Commitments
-</p>
+    <div class="projects-grid">
 
+        @for (p of projects; track p) {
 
-<div class="project-container">
-    @for (p of projects; track p) {
-        <div class="project">
-            <div class="title">{{ p?.title }}</div>
-            <p class="description">{{ p?.description }}</p>
-            <div class="image-container">
-                @for (img of p?.techIcons; track img) {
-                    <img [src]="'./assets/images/tech/' + img + '.png'">
-                }
-            </div>
-            <p class="description">Technologies Used: {{ p?.technologies }}</p>
-            <a target="_blank" [href]="p?.link">Code</a>
-        </div>
-    }
-</div>
+            <article class="project-card">
 
+                <div class="project-card-content">
+
+                    <h3>
+                        {{ p?.title }}
+                    </h3>
+
+                    <p class="project-description">
+                        {{ p?.description }}
+                    </p>
+
+                    <div class="tech-stack">
+
+                        @for (img of p?.techIcons; track img) {
+
+                            <img
+                                    [src]="'./assets/images/tech/' + img + '.png'"
+                                    [alt]="img + ' technology icon'"
+                                    loading="lazy"
+                            >
+
+                        }
+
+                    </div>
+
+                    <p class="project-technologies">
+
+            <span>
+              Technologies Used:
+            </span>
+
+                        {{ p?.technologies }}
+
+                    </p>
+
+                    <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            [href]="p?.link"
+                            class="project-link">
+
+                        View Source Code
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        }
+
+    </div>
+
+</section>

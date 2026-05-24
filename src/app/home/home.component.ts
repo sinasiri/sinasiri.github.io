@@ -14,17 +14,25 @@ import {LottiePlayerComponent} from "../lottie-player/lottie-player.component";
 export class HomeComponent {
 
     options: AnimationOptions = {
-        path: './assets/animations/home.json',
+        path: '/assets/animations/home.json',
+        loop: true,
+        autoplay: true
     };
 
     backEndOptions: AnimationOptions = {
-        path: './assets/animations/backend.json',
+        path: '/assets/animations/backend.json',
+        loop: true,
+        autoplay: true
     };
     cloudOptions: AnimationOptions = {
-        path: './assets/animations/cloud.json',
+        path: '/assets/animations/cloud.json',
+        loop: true,
+        autoplay: true
     };
     cryptoOptions: AnimationOptions = {
-        path: './assets/animations/crypto.json',
+        path: '/assets/animations/crypto.json',
+        loop: true,
+        autoplay: true
     };
 
     socials = [

@@ -1,52 +1,143 @@
-<div class="full-stack-development">
-  <div class="img">
-      <app-lottie-player
-              [options]="options"
-              [showPlaceholder]="true">
-          <div placeholder class="loading-spinner">Loading...</div>
-      </app-lottie-player>
-  </div>
-  <div class="description">
-    <div class="title">
-      Contact me
-    </div>
-    <div class="item-container">
-      <div class="item">"If people like you they will listen to you, but if they trust you they'll do business with
-        you."
-      </div>
-      <app-social-media></app-social-media>
-      <app-cv [buyMeACoffee]="false"></app-cv>
-    </div>
-  </div>
-</div>
+<!-- contact.component.html -->
 
+<section class="contact-hero-section">
 
-<div style="margin-top: 150px;margin-bottom: 100px" class="full-stack-development">
+    <div class="contact-hero-container">
 
-  <div class="description">
-    <div>
-      <h1 class="title-colorless">I'd love to hear from you</h1>
+        <div class="contact-animation">
+            <app-lottie-player
+                    [options]="options"
+                    [showPlaceholder]="true">
+
+                <div placeholder class="loading-spinner">
+                    Loading...
+                </div>
+
+            </app-lottie-player>
+        </div>
+
+        <div class="contact-content">
+
+            <p class="section-label">
+                Let's Connect
+            </p>
+
+            <h1>
+                Contact Me
+            </h1>
+
+            <p class="contact-description">
+                Looking for a Full-Stack Software Engineer for your next project,
+                collaboration, or business idea? I’d love to hear from you.
+            </p>
+
+            <blockquote class="contact-quote">
+                “If people like you they will listen to you,
+                but if they trust you they'll do business with you.”
+            </blockquote>
+
+            <div class="contact-actions">
+                <app-social-media></app-social-media>
+                <app-cv [buyMeACoffee]="false"></app-cv>
+            </div>
+
+        </div>
+
     </div>
-    <div class="item-container">
-      <form (submit)="sendEmail($event)" class="contact-form">
-        <input class="contact-form-text" type="text" name="name" placeholder="Name" required>
-        <input class="contact-form-text" type="email" name="email" placeholder="Email" required>
-        <input class="contact-form-text" type="text" name="subject" placeholder="Subject"
-               required>
-        <textarea class="contact-form-text text-area" name="message" placeholder="Message"
+
+</section>
+
+<section class="contact-form-section">
+
+    <div class="contact-form-container">
+
+        <div class="form-content">
+
+            <p class="section-label">
+                Get In Touch
+            </p>
+
+            <h2>
+                I'd Love To Hear From You
+            </h2>
+
+            <p class="form-description">
+                Have a question, freelance opportunity, or project idea?
+                Send me a message and I’ll get back to you as soon as possible.
+            </p>
+
+            <form
+                    (submit)="sendEmail($event)"
+                    class="contact-form">
+
+                <div class="form-group">
+                    <input
+                            class="contact-input"
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            required
+                            autocomplete="name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                            class="contact-input"
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                            autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                            class="contact-input"
+                            type="text"
+                            name="subject"
+                            placeholder="Subject"
+                            required
+                    >
+                </div>
+
+                <div class="form-group">
+          <textarea
+                  class="contact-input contact-textarea"
+                  name="message"
+                  placeholder="Write your message..."
                   spellcheck="false"
-                  required></textarea>
+                  required>
+          </textarea>
+                </div>
 
-        <input type="submit" value="Send" class="contact-form-btn">
-      </form>
+                <button
+                        type="submit"
+                        class="contact-submit-btn">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="form-animation">
+
+            <app-lottie-player
+                    [options]="emailOptions"
+                    [showPlaceholder]="true">
+
+                <div placeholder class="loading-spinner">
+                    Loading...
+                </div>
+
+            </app-lottie-player>
+
+        </div>
+
     </div>
-  </div>
 
-  <div class="img">
-      <app-lottie-player
-              [options]="emailOptions"
-              [showPlaceholder]="true">
-          <div placeholder class="loading-spinner">Loading...</div>
-      </app-lottie-player>
-  </div>
-</div>
+</section>
