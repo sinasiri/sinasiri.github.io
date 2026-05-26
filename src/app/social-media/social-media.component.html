@@ -1,5 +1,20 @@
-<div class="social-media">
-  @for (social of socials; track social) {
-    <a target="_blank" [href]="social.link"><img [src]="social.imageUrl"></a>
-  }
+<div class="social-media" aria-label="Social media links">
+    @for (social of socials; track social.link) {
+        <a
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                [href]="social.link"
+                [attr.aria-label]="social.name"
+                [attr.title]="social.name"
+        >
+            <img
+                    [src]="social.imageUrl"
+                    [alt]="social.name + ' icon'"
+                    loading="lazy"
+                    width="40"
+                    height="40"
+            >
+        </a>
+    }
 </div>

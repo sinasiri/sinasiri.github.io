@@ -1,7 +1,24 @@
 <div class="btn-container">
-  <a href="./assets/static/Sina-Nasiri-CV.pdf" download="sina-nasiri-cv">Get a copy of my CV</a>
-  @if (!!buyMeACoffee) {
-    <a class="buy" target="_blank" href="https://www.buymeacoffee.com/sinasiri">&#9749; Buy me a
-    coffee</a>
-  }
+    <a
+            class="btn btn-primary"
+            href="/assets/static/sina-cv.pdf"
+            download="sina-nasiri-cv"
+            aria-label="Download Sina Nasiri CV PDF"
+            title="Download Sina Nasiri CV"
+    >
+        Download CV
+    </a>
+
+    @if (!!buyMeACoffee) {
+        <a
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.buymeacoffee.com/sinasiri"
+                aria-label="Buy Sina Nasiri a coffee"
+                title="Support Sina Nasiri on Buy Me a Coffee"
+        >
+            ☕ Buy Me a Coffee
+        </a>
+    }
 </div>

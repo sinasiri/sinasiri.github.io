@@ -9,7 +9,7 @@ const serverConfig: ApplicationConfig = {
         provideServerRendering(withRoutes(serverRoutes)),
         provideLottieServerOptions({
             preloadAnimations: {
-                folder: './dist/github-profile/browser/assets/animations',
+                folder: './src/assets/animations',
                 animations: ['backend.json', 'blog.json', 'cloud.json', 'crypto.json', 'education.json', 'email.json', 'experience.json', 'hired.json', 'home.json', 'loading.json', 'projects.json'],
             },
         }),

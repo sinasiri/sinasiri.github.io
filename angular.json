@@ -17,7 +17,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "externalDependencies": ["lottie-web"],
+            "allowedCommonJsDependencies": [
+              "lottie-web"
+            ],
+            "externalDependencies": [
+            ],
             "outputPath": "dist/github-profile",
             "index": "src/index.html",
             "browser": "src/main.ts",

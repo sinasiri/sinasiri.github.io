@@ -18,7 +18,7 @@ export class ProjectsComponent {
         {
             title: 'sinasiri.github.io',
             description: 'Created and designed a portfolio project based on Angular latest version.',
-            technologies: 'Angular 17, HTML, SCSS, Material UI, Typescript, Javacript',
+            technologies: 'Angular 21, HTML, SCSS, Material UI, Typescript, Javacript',
             techIcons: ['angular', 'typescript', 'html'],
             link: 'https://github.com/sinasiri/sinasiri.github.io',
         }

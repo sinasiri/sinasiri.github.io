@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter, input, computed, inject} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {Component, Input, Output, EventEmitter, input, computed, inject, PLATFORM_ID, OnInit} from '@angular/core';
+import {CommonModule, isPlatformBrowser} from '@angular/common';
 import {LottieComponent, AnimationOptions, LottieTransferState} from 'ngx-lottie';
 
 @Component({
@@ -8,20 +8,18 @@ import {LottieComponent, AnimationOptions, LottieTransferState} from 'ngx-lottie
     imports: [CommonModule, LottieComponent],
     template: `
         <div class="lottie-container">
-            <ng-lottie
-                    [options]="computedOption()"
-                    (complete)="complete.emit($event)"
-                    (configReady)="onConfigReady()"
-                    (dataReady)="onDataReady()"
-                    (domLoaded)="onDomLoaded()"
-                    (error)="onError($event)">
-            </ng-lottie>
+            @if (isBrowser) {
+                <ng-lottie
+                        [options]="computedOption()"
+                        (complete)="complete.emit($event)">
+                </ng-lottie>
+            }
+
         </div>
     `,
     styles: [`
       .lottie-container {
         width: 100%;
-        height: 300px;
         display: block;
       }
 
@@ -32,11 +30,16 @@ import {LottieComponent, AnimationOptions, LottieTransferState} from 'ngx-lottie
       }
     `]
 })
-export class LottiePlayerComponent {
+export class LottiePlayerComponent implements OnInit{
     options = input<AnimationOptions>();
     showPlaceholder = input<boolean>(false);
     @Output() complete = new EventEmitter<any>();
+    private platformId = inject(PLATFORM_ID);
 
+    isBrowser = false;
+    ngOnInit(): void {
+        this.isBrowser = isPlatformBrowser(this.platformId);
+    }
     lottieTransferState = inject(LottieTransferState);
 
     computedOption = computed(() => {
@@ -54,19 +57,7 @@ export class LottiePlayerComponent {
         return opts;
     });
 
-    onConfigReady() {
-        console.log('✅ Lottie config ready');
-    }
 
-    onDataReady() {
-        console.log('✅ Lottie data loaded');
-    }
 
-    onDomLoaded() {
-        console.log('✅ Lottie DOM loaded');
-    }
 
-    onError(error: any) {
-        console.error('❌ Lottie error:', error);
-    }
 }
